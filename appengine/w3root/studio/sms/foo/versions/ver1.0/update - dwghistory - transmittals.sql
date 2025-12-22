@@ -1,0 +1,1 @@
+update vasmsdb.dwghistory set scaleina1 = 'Transmittal' where remark like '%TmNO%';

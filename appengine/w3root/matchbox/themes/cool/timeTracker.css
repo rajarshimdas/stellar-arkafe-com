@@ -1,0 +1,67 @@
+/*
++-------------------------------------------------------+
+| Rajarshi Das						|
++-------------------------------------------------------+
+| Created On: 04-Feb-2012				|
+| Updated On:           				|
++-------------------------------------------------------
+| Project Binder > Manhour Tabulation                   |
++-------------------------------------------------------+
+*/
+.headerRow {
+    text-align: center;
+    font-size: 9pt;
+}
+.headerRowCell1 {
+    height:40px;
+    background: #f7eeaa;
+    border: 1px solid black;
+    padding: 2px;    
+}
+.headerRowCell2 {
+    background: #f7eeaa;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top:1px solid black;
+    padding: 2px;   
+}
+.headerRowCell3 {
+    background: #f7eeaa;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 2px;
+    font-size: 85%;
+    font-weight: normal;
+}
+.headerRowCell4 {
+    background: #f7eeaa;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 2px;   
+}
+.dataRow {
+    font-size: 9pt;
+}
+.dataRowCell1 {
+    height: 40px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+    font-size: 9pt;
+}
+.dataRowCell2 {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+    font-size: 9pt;
+}
+.stageRow {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background: cyan;
+    height: 40px;
+    font-weight: bold;
+    font-size: 10pt;
+}

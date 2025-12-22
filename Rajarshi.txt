@@ -1,0 +1,45 @@
+Rajarshi Das
+
+Created: 14-10-2022
+Updated: 19-04-2024
+
+
+Install
+
+Ubuntu 20.04 LTS
+Nginx
+php 7.4 (php-mysql extension)
+Mariadb 10.3.39
+
+
+Configuration Notes:
+
+1. Git clone the repo.
+2. Create & Edit appengine/w3root/clientPaths.cgi (w3path)
+3. Create & Edit appengine/w3etc/LocalSettings.php (base_url & database)
+4. Run setup.sh
+
+First time on new server:
+
+5. Nginx conf sample at appengine/nginx.conf
+6. Add .cgi to php-fpm security.limit_extensions in pool.d/www.conf
+7. PHP Extensions intl mbstring mysql required
+
+Database setup:
+/*
+create user 'cn2'@'localhost';
+set password for 'cn2'@'localhost' = password('m7jack');
+
+grant select,lock tables,show view on a_db.* to 'cn1'@'localhost';
+grant all on a_db.* to 'cn2'@'localhost';
+
+flush privileges;
+*/
+
+VSCode parse *.cgi as php in
+Settings > Files > Associations
+Add:
+*.cgi , php
+
+Arkafe logo font is Fredoka from Google fonts
+

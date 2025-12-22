@@ -1,0 +1,145 @@
+/*
++-------------------------------------------------------+
+| Rajarshi Das                                          |
++-------------------------------------------------------+
+| Created:  22-Nov-2022                                 |
+| Updated:                                              |
++-------------------------------------------------------+
+*/
+:root {
+    --rd-max-width: 1350px;
+    --rd-login-background: #1a477c;
+    --rd-home-box1: #dce9ed;
+    --rd-home-box2: #c1d4db;
+    --rd-nav-dark: #185daf;
+    --rd-nav-light: #123256;
+    --rd-form-background: #E8E9FF;
+    --rd-form-bg: #e5e9e7;
+    --rd-form-bg2: #466f9d;
+    --rd-nav-active: cyan;
+    --rd-hover: #fecd61;
+    --rd-box-border-color: rgb(80, 80, 80);
+    /* Text color */
+    --rd-dark-gray: rgb(65, 65, 65);
+    --rd-light-gray: rgb(100, 100, 100);
+    /* UI Elements */
+    --rd-color-primary: #123256;
+    --rd-color-button: #0A66C2;
+    --rd-table-head: #cdd6e1;
+    --rd-table-font-size: 0.92em;
+    --rd-table-border: rgb(170, 170, 170);
+    --rd-border-light: rgb(194, 194, 194);
+    --rd-messagebox-bg-ok: rgb(163, 214, 170);
+    --rd-messagebox-bg-fail: rgb(252, 181, 181);
+}
+
+/* Segoi UI */
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/matchbox/fonts/segoe-ui.woff2');
+}
+
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    src: url('/matchbox/fonts/Roboto-Regular.ttf');
+}
+
+/* Roboto Bold */
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('/matchbox/fonts/Roboto-Bold.ttf');
+}
+
+
+a.button-18 {
+    text-decoration: none;
+}
+
+.button-18 {
+    align-items: center;
+    background-color: var(--rd-color-button);
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    /* font-size: 16px; */
+    font-family: 'Roboto Bold';
+    /* font-weight: 600; */
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 23px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus {
+    background-color: #16437E;
+    color: #ffffff;
+}
+
+.button-18:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+    border: 1px solid gray;
+}
+
+
+.button-18red {
+    background-color: #c20a7f;
+}
+
+.button-18red:active,
+.button-18red:focus,
+.button-18red:hover {
+    background-color: #960661;
+}
+
+.button-18gray {
+    background-color: rgb(122, 122, 122);
+}
+
+.button-18gray:active,
+.button-18gray:focus,
+.button-18gray:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+.rd-messagebox-ok {
+    padding: 10px;
+    background-color: var(--rd-messagebox-bg-ok);
+}
+
+.rd-messagebox-fail {
+    padding: 10px;
+    background-color: var(--rd-messagebox-bg-fail);
+}
+
+.fa5button {
+    opacity: 0.7;
+    height: 25px;
+}
+
+.fa5button:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}

@@ -1,0 +1,313 @@
+/*
++-------------------------------------------------------+
+| Rajarshi Das                                          |
++-------------------------------------------------------+
+| Created: 30-Sep-2011 (3rd day of Durga Puja)          |
+| Updated: 14-May-2014                                  |
+|           08-Apr-2025                                 |
++-------------------------------------------------------+
+| CONCERT   http://concert.arkafe.com                   |
+|           rd@rajarshi.me                              |
++-------------------------------------------------------+
+*/
+@import "normalize.css";
+@import "fonts-and-ui.css";
+
+/* CSS */
+body {
+    font-size: 1em;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    font-weight: normal;
+    color: var(--rd-dark-gray);
+}
+
+textarea {
+    font-size: 0.9em;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    font-weight: normal;
+    box-sizing: border-box;
+    color: var(--rd-dark-gray);
+}
+
+input,
+select {
+    box-sizing: border-box;
+    color: var(--rd-dark-gray);
+    padding: 4px;
+    margin: 2px;
+}
+
+select {
+    font-size: 0.9em;
+}
+
+input::placeholder {
+    color: gray;
+    font-size: 0.9em;
+}
+
+table tr td {
+    /* Text color */
+    color: var(--rd-dark-gray);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rd-color-primary);
+}
+
+.windowBox {
+    width: 1000px;
+    margin: auto;
+    padding: 0px;
+}
+
+.windowBox2 {
+    width: 100%;
+    max-width: var(--rd-max-width);
+    margin: auto;
+    padding: 0px;
+}
+
+.footer {
+    padding: 10px 0 50px 0;
+    text-align: center;
+    color: gray;
+}
+
+td#t2 {
+    background-color: var(--rd-nav-light);
+}
+
+#tabs {
+    /*
+    float: right;
+    width: calc(100% - 15px);
+    line-height: inherit;
+    */
+    font-size: 1.06em;
+    margin: 0;
+    padding: 2px 0px 0px 0px;
+    background-color: var(--rd-nav-light);
+}
+
+#tabs ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#tabs li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+}
+
+#tabs a {
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    /* background: rgb(180, 180, 180) no-repeat left top; */
+    background: var(--rd-nav-light) no-repeat left top;
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+    /*---------------------------------------------------------*/
+    /* Change the following width to change the width of tabs  */
+    /*---------------------------------------------------------*/
+    width: 160px;
+    /*---------------------------------------------------------*/
+    /* padding-top: 8px; */
+    line-height: 38px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+#tabs a span {
+    float: left;
+    color: #ffffff
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {
+    float: none
+}
+
+/* End IE5-Mac hack */
+#tabs a:hover {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+#tabs a:hover span {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+#tabs a.activeTab {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+td#t2 a.activeTab span {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+#nav {
+    font-size: 0.95em;
+    font-weight: normal;
+    height: 35px;
+    /* Sub-Menu Height */
+    background: var(--rd-nav-dark);
+    /* rgb(40, 40, 40); */
+    text-align: center;
+    color: rgb(5, 5, 5);
+}
+
+#nav a {
+    text-align: right;
+    color: white;
+    margin: 0;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: var(--rd-nav-active);
+}
+
+#nav .activeTab {
+    color: var(--rd-nav-active);
+}
+
+.contents-to-be-deleted {
+    height: 420px;
+    width: 900px;
+    vertical-align: top;
+    text-align: center;
+    color: #ffffff;
+    background-color: chartreuse;
+}
+
+/*
++-------------------------------------------------------+
+| Table (13-Feb-2012)					                |
++-------------------------------------------------------+
+*/
+table.tabulation {
+    width: 100%;
+    max-width: var(--rd-max-width);
+    max-width: auto;
+    font-size: 0.9em;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    /* border-collapse: collapse; */
+    border-top: 1px solid var(--rd-table-border);
+    border-left: 1px solid var(--rd-table-border);
+    border-spacing: 0px;
+}
+
+table.tabulation thead {
+    top: 0px;
+    position: sticky;
+    z-index: 10;
+    background: var(--rd-table-head);
+    font-family: "Roboto Bold";
+}
+
+table.tabulation tr {
+    height: 40px;
+}
+
+table.tabulation tr td {
+    line-height: 1.1em;
+    border-right: 1px solid var(--rd-table-border);
+    border-bottom: 1px solid var(--rd-table-border);
+    color: var(--rd-dark-gray);
+}
+
+table.tabulation tr td.dataRowCell2a a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--rd-dark-gray);
+}
+
+table.tabulation tr td.dataRowCell2a:hover {
+    background: cyan;
+    cursor: pointer;
+}
+
+
+/*
++-------------------------------------------------------+
+| UI Elements                                           |
++-------------------------------------------------------+
+*/
+
+.button {
+    font-size: 0.9em;
+    /* top and bottom | left and right */
+    padding: 4px 12px;
+    margin: 4px 2px;
+    border: 1px solid var(--rd-color-primary);
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: var(--rd-dark-gray);
+    /* from pure-css */
+    display: inline-block;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--rd-color-primary);
+    color: white;
+    cursor: pointer;
+}
+
+.inputReadonly {
+    width: 100%;
+    text-align: left;
+    background: RGB(200, 200, 200);
+}
+
+.inputForm {
+    background: #E8E9FF;
+}
+
+.fa5button {
+    opacity: 0.7;
+    height: 25px;
+}
+
+.fa5button:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.divBanner {
+    background-color: #E8E9FF;
+    line-height: 45px;
+}
+

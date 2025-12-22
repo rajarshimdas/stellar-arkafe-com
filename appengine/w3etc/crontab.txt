@@ -1,0 +1,42 @@
+# Rajarshi Das
+# Created: 23-Jan-2012
+# Updated: 02-Jan-2013
+#
+
+# PATH variable setting
+PATH=/var/w3/da/w3etc:/var/w3/da/w3etc/cronjobs/bin:/var/w3/da/w3etc/cronjobs/run/studioR:$PATH
+
+# Syntax
+# minute hour dayofmonth month dayofweek command
+
+# Test SMTP Server
+#15 12 * * * /var/rajarshi/w3etc/cronjobs/smtp-test.php
+
+# Generate Backups
+55 10 * * * backup.sh
+45 12 * * 1 backupOnCloud.sh
+35 17 * * * sessionPurge.php
+
+# Sync TimeDESK data
+45 * * * * getTimeDeskIOdata.php > /dev/null 2>&1
+
+# Monthly Project Teammate Matrix Report
+30 0011 0005 * * firmwideReport.php > /dev/null 2>&1
+31 0011 0005 * * teammateReport.php > /dev/null 2>&1
+32 0011 0005 * * projectReport-DA.php > /dev/null 2>&1
+32 0011 0005 * * projectReport-DAAT.php > /dev/null 2>&1
+33 0011 0005 * * projectDashboard.php > /dev/null 2>&1
+
+# Purge obsolete projects
+00 12 1 * * purgeDormantProjects.php > /dev/null 2>&1
+
+# SugarCRM
+* * * * * cd /var/www/SugarCE; /usr/bin/php -f cron.php
+
+# Todo
+# Timesheet fill reminders
+
+# Testing
+#39 14 * * * projectReport-DA.php > /dev/null 2>&1
+#39 14 * * * projectReport-DAAT.php > /dev/null 2>&1
+

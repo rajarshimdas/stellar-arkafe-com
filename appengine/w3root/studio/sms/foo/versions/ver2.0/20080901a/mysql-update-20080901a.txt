@@ -1,0 +1,41 @@
+# Update database usersdb
+
+# SELECT THE DATABASE TO USE
+USE va_usersdb;
+
+# Reset fg_files table
+delete from fg_files;
+alter table `fg_files` AUTO_INCREMENT = 0;
+delete from fg_activity_log;
+
+# New tables
+
+# STORE THE MAILING LIST
+CREATE TABLE `fg_mail` (
+  `user_profiles_id` int unsigned NOT NULL,
+  `sendmail` bool not null
+) ENGINE=InnoDB;
+
+
+# CREATE A VIEW FOR READING THE MAILING LIST
+CREATE VIEW view_fg_mail AS
+
+	SELECT 	t1.id,
+			t1.loginname,
+			t1.email,
+			
+			t2.project_id,
+			t2.role_id,
+			
+			t3.sendmail
+			
+	FROM 	vasmsdb.user_profiles AS t1,
+			vasmsdb.user_projects AS t2,
+			va_usersdb.fg_mail AS t3	
+			
+	WHERE 	(t1.id = t2.user_profiles_id) and
+			(t1.id = t3.user_profiles_id) and
+			
+			t1.active = 1 and
+			t2.active = 1;
+			

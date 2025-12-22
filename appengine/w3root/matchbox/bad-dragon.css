@@ -1,0 +1,99 @@
+input,
+textarea,
+select {
+    width: 100%;
+}
+
+label {
+    color: gray;
+    font-size: 0.8em;
+}
+
+table.task-table {
+    width: 100%;
+    margin: auto;
+    max-width: var(--rd-max-width);
+    /* border-collapse: collapse; */
+    border-spacing: 0px;
+    border-left: 1px solid var(--rd-border-light);
+    border-top: 1px solid var(--rd-border-light);
+    font-size: 0.8em;
+}
+
+table.task-table tr {
+    height: 25px;
+}
+
+table.task-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-weight: bold;
+    background-color: #d2dfef;
+
+}
+
+table.task-table thead tr td {
+    vertical-align: middle;
+    line-height: 1.2em;
+}
+
+table.task-table tr td {
+    border-right: 1px solid var(--rd-border-light);
+    border-bottom: 1px solid var(--rd-border-light);
+    text-align: center;
+    padding: 0px;
+    line-height: 35px;
+    height: 35px;
+    vertical-align: top;
+}
+
+.taskDiv {
+    padding: 0px 5px;
+    line-height: 1.2em;
+    font-weight: bold;
+}
+
+.task-table-form {
+    width: 100%;
+    max-width: var(--rd-max-width);
+    margin: auto;
+    border-spacing: 5px;
+    background-color: #d4d5e9;
+    /* padding: 10px; */
+}
+
+.taskCell {
+    width: 100%;
+    border-spacing: 2px;
+}
+
+.taskCell tr {
+    height: auto;
+}
+
+.taskCell tr td {
+    text-align: left;
+    border: 0px solid green;
+}
+
+
+td.activeCell:hover {
+    background-color: cadetblue;
+}
+
+
+#page-lock-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}

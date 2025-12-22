@@ -1,0 +1,29 @@
+Global Vars
+
+$route                              Routing information object
+
+$_SESSION['bdMessageTxt']           Display message
+$_SESSION['bdMessageFlag']          Flag 0: Normal | 1: Success | 2: Error
+    
+$_SESSION["activePID"]              Active Project Id
+
+$_SESSION["sysShowDeletedProj"]     Sysadmin Portal Show deleted  (Show: 1 | Hide: 0)
+$_SESSION["sysShowDeletedUser"]     Sysadmin Portal Show deleted  (Show: 1 | Hide: 0)
+
+$_SESSION["taskFilterNo"]           Active Task Filter Number
+$_SESSION["activeUID"]              Selected User Id
+
+$_SESSION["misFromDate"]            MIS From misFromDate
+
+$_SESSION["dateRangeFrom"]          dateRangeFrom
+$_SESSION["dateRangeTo"]            dateRangeTo
+
+$_SESSION["bdFinancialYear"]        Cost MIS FY
+
+$tsTaskMode                         LocalSettings 0|1 on|off
+
+$_SESSION["leaveCalendarUserId"]    Filter User in HR Calendar View
+$_SESSION["leaveMISMonth"]          MIS month
+leaveMISYear                        MIS year
+hrmsActiveUser                      Active user Selected
+hrmsDeletedUsersToggle              Flag Show/Hide deleted users

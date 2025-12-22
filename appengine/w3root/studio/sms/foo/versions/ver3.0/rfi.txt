@@ -1,0 +1,44 @@
+rfi;
++--------------------+-----------------------+------+-----+---------+----------------+
+| Field              | Type                  | Null | Key | Default | Extra          |
++--------------------+-----------------------+------+-----+---------+----------------+
+| id                 | bigint(20) unsigned   | NO   | PRI | NULL    | auto_increment |
+| project_id         | mediumint(8) unsigned | NO   |     |         |                |
+| user_profiles_id   | int(10) unsigned      | NO   |     |         |                |
+| no_of_items        | smallint(6)           | NO   |     |         |                |
+| no_of_items_closed | smallint(6)           | NO   |     | 0       |                |
+| rfi_closed         | tinyint(1)            | NO   |     | 0       |                |
+| dtime              | datetime              | NO   |     |         |                |
+| active             | tinyint(1)            | NO   |     |         |                |
++--------------------+-----------------------+------+-----+---------+----------------+
+
+
+rfi_question;
++----------------+---------------------+------+-----+---------+-------+
+| Field          | Type                | Null | Key | Default | Extra |
++----------------+---------------------+------+-----+---------+-------+
+| rfi_id         | bigint(20) unsigned | NO   | MUL |         |       |
+| srno           | smallint(6)         | NO   |     |         |       |
+| discipline     | varchar(100)        | NO   |     |         |       |
+| topic          | varchar(250)        | NO   |     |         |       |
+| question       | text                | NO   |     |         |       |
+| attachment     | varchar(100)        | NO   |     |         |       |
+| no_of_response | smallint(6)         | NO   |     | 0       |       |
+| required_by    | date                | NO   |     |         |       |
+| remark         | varchar(250)        | NO   |     |         |       |
+| closed         | tinyint(1)          | NO   |     |         |       |
++----------------+---------------------+------+-----+---------+-------+
+
+
+rfi_response;
++-------------------+---------------------+------+-----+---------+-------+
+| Field             | Type                | Null | Key | Default | Extra |
++-------------------+---------------------+------+-----+---------+-------+
+| rfi_id            | bigint(20) unsigned | NO   | MUL |         |       |
+| rfi_question_srno | smallint(6)         | NO   |     |         |       |
+| response_no       | smallint(6)         | NO   |     |         |       |
+| response          | text                | NO   |     |         |       |
+| attactment        | varchar(100)        | NO   |     |         |       |
+| dtime             | datetime            | NO   |     |         |       |
++-------------------+---------------------+------+-----+---------+-------+
+

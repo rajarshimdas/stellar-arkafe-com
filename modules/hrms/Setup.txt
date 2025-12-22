@@ -1,0 +1,4 @@
+1. App/env.php
+2. w3root/aec/paths.php
+3. symlink w3root/public & w3root/aec/public folder
+4. Configure nginx to load index.php from aec folder.

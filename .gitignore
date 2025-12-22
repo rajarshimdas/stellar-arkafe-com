@@ -1,0 +1,20 @@
+# 
+# Rajarshi Das
+#
+
+
+# Configuration
+appengine/w3etc/LocalSettings.php
+appengine/w3root/clientPaths.cgi
+
+# W3ROOT
+appengine/w3root/aec/paths.php
+appengine/w3root/aec/public
+appengine/w3root/public
+
+# Tests
+appengine/w3root/tests
+
+# Others
+*.code-workspace
+.DS_Store

@@ -1,0 +1,9 @@
+$mysqli = new mysqli("localhost", "user", "password", "database");
+echo $mysqli->host_info;
+
+$result = $mysqli->query($query);
+while ($row = $result->fetch_assoc()) {
+    
+    
+}
+

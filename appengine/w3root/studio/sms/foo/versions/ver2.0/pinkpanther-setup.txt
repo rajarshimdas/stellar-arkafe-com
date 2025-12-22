@@ -1,0 +1,171 @@
++
++ Rajarshi Das
++
++-----------------------------------------------------------------------------------------------+
+| pinkpanther setup documentation								|
++-----------------------------------------------------------------------------------------------+
+| Created: 	20080820									|
+| Updated:	20080820a									|
+| Versions:	sms	2.0									|
+|		studio	1.0									|
++-----------------------------------------------------------------------------------------------+
+
+Setup the Pre-requisites: 
+(not documented here since there are good references available and might change with new releases)
+
++ FreeBSD 7.x (Linux can also be used with very little modifications)
++ Apache2.2.x
++ php5.2.x (with PEAR)
++ MySQL5.0.x
++ PureFTPd
++ postfix (replace sendmail)
++ webmin (if web based GUI for administration is required)
+
++-----------------------------------------------------------------------------------------------+
+| Symlinks 											|
++-----------------------------------------------------------------------------------------------+
+(all the following symlinks are relative to the documentroot)
+
+dx/foo 			-> dm/foo
+dx/hot6e		-> dm/hot6e
+dx/share138		-> share138
+
+dm/uploads		-> uploads
+dm/share138		-> share138
+dm/hot6e/search.php	-> dm/hot6e/search.cgi
+dm/hot6e/search-a.php	-> dm/hot6e/search-a.cgi
+dm/hot6e/browse.php	-> dm/hot6e/browse.cgi
+
+
++-----------------------------------------------------------------------------------------------+
+| Folders											|
++-----------------------------------------------------------------------------------------------+
+(apache user must own these folders)
+uploads
+share138
+mw/images
+
+
++-----------------------------------------------------------------------------------------------+
+| Views												|
++-----------------------------------------------------------------------------------------------+
+(simply copy paste the following into a views.sql file and upload into mysql as root)
+
+# Start views.sql
+
+use vasmsdb;
+/*
++-----------------------------------------------------------------------+
+| view_drawing_list							|
++-----------------------------------------------------------------------+
+*/
+drop view if exists view_drawing_list;
+create view view_drawing_list as
+ 
+select 	dwglist.id,
+	dwglist.project_id,
+	
+	dwglist.dwgidentity,
+	dwglist.disciplinecode,		 
+	concat(dwglist.dwgidentity,'-',dwglist.disciplinecode,'-',dwglist.unit,dwglist.part) as sheetno,
+	dwglist.currentrevno as revno, 
+	dwglist.title, 
+	
+	dwglist.newstage as stage,		
+	dwglist.r0issuedt as anewtargetdt,
+	dwglist.stageclosed as aissuedflag,
+	
+	/* Tracking commited Target dates */
+	dwglist.dtime as commitdt,
+	
+	dwglist.r0targetdt,
+	dwglist.newr0targetdt,
+	dwglist.r0issuedflag,
+	
+	dwglist.lastissuedrevno,
+	dwglist.lastissueddate,
+	
+	dwglist.priority as actionby,
+	dwglist.remark
+		
+from dwglist
+ 
+where active = 1;
+
+/*
++-----------------------------------------------------------------------+
+| view_users								|
++-----------------------------------------------------------------------+
+*/
+drop view if exists view_users;
+create view view_users as 
+
+select  user_profiles.id,
+	user_profiles.loginname,
+	user_profiles.passwd,		
+	user_profiles.fname,
+	user_profiles.lname,
+	user_profiles.email,
+		
+	transadd.company as organization,
+		
+	user_profiles.designation,
+	user_profiles.mobile_no as mobile,
+	user_profiles.phone_no as phone,
+	
+	user_projects.project_id,
+	user_projects.role_id,
+	user_projects.user_preference as preferences,
+	user_projects.accept_terms_and_conditions as ok,
+	user_projects.active
+		
+from user_profiles, user_projects, transname, transadd
+
+where 
+	
+	(user_profiles.id = user_projects.user_profiles_id) 
+
+and 	(user_profiles.id = transname.user_profiles_id)
+
+and 	(transname.transadd_id = transadd.id)
+
+and	user_profiles.active = 1;
+
+/*
++-----------------------------------------------------------------------+
+| view_contacts								|
++-----------------------------------------------------------------------+
+*/
+drop view if exists view_contacts;
+create view view_contacts as 
+
+select  t1.id,
+	t1.contact,
+				
+	t3.roles,
+
+	t2.company,
+		
+	t1.phoneno,
+	t1.email,
+	t1.project_id	
+
+from transname as t1, transadd as t2, roles as t3
+
+where 
+	
+	(t1.transadd_id = t2.id)
+	
+and (t1.role_id = t3.id)
+
+and t1.active = 1;
+
+/*
++-----------------------------------------------------------------------+
+| view_login								|
++-----------------------------------------------------------------------+
+*/
+drop view if exists view_login;
+create view view_login as select project_id, projectname, loginname, logintime from sessi0ns order by logintime;
+
+# End

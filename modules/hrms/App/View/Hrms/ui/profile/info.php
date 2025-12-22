@@ -1,0 +1,4 @@
+info
+
+<?php
+rx($user);

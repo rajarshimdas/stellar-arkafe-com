@@ -1,0 +1,1 @@
+<?php header("Location:project.cgi?a=t1xcontacts"); ?>

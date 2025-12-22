@@ -1,0 +1,1 @@
+ALTER TABLE `vasmsdb`.`blocks` ADD COLUMN `phase` SMALLINT UNSIGNED NOT NULL DEFAULT 1 AFTER `blockname`;

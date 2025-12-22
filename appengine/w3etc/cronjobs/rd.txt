@@ -1,0 +1,15 @@
+# Rajarshi Das
+# Created: 15-Jun-2024
+# Updated: 
+#
+
+PATH=/var/www/abhikalpan/abhikalpan-arkafe-com/appengine/w3etc/cronjobs/bin:/home/rd/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+# m h  dom mon dow   command
+
+# Dump database
+59 23 * * * adb_dump.sh
+
+# Delete sessions
+1 0 * * * sessionPurge.php
+1 0 * * * sessionFiles.sh
+

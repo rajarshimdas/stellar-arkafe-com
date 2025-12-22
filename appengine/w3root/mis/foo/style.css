@@ -1,0 +1,66 @@
+/*
++-------------------------------------------------------+
+| Rajarshi Das						|
++-------------------------------------------------------+
+| Created On: 04-Feb-2012				|
+| Updated On:           				|
++-------------------------------------------------------+
+| www.rajarshi.in                                       |
+| raj@rajarshi.in                                       |
++-------------------------------------------------------+
+*/
+body{
+    font: 9pt Verdana, Arial, sans-serif, Helvetica, Frutiger, Futura, Trebuchet MS;
+}
+table{
+    font: 9pt Verdana, Arial, sans-serif, Helvetica, Frutiger, Futura, Trebuchet MS;
+}
+.headerRow {
+    text-align: center;
+    font-size: 80%;
+}
+.headerRowCell {
+    height:40px;
+    background: #f7eeaa;
+    border: 1px solid black;
+    padding: 2px;    
+}
+.headerRowCell1 {
+    background: #f7eeaa;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top:1px solid black;
+    padding: 2px;   
+}
+.headerRowCell2 {
+    background: #f7eeaa;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 2px;    
+}
+.headerRowCell3 {
+    background: #f7eeaa;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 2px;   
+}
+.dataRowCell1 {
+    height: 40px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+}
+.dataRowCell2 {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+}
+.stageRow {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background: cyan;
+    height: 40px;
+    font-weight: bold;
+}

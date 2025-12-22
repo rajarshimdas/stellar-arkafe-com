@@ -1,0 +1,108 @@
+body {
+    background-color: white;
+}
+
+body.loginPage {
+    background-color: var(--rd-login-background);
+}
+
+/* Portal Home Page */
+table {
+    background-color: white;
+    border: 1px solid gray;
+    border-spacing: 0px;
+    padding: 0px;
+}
+
+table.tableBox {
+    /* font-size: 1.02rem; */
+    border: 0px;
+}
+
+table.tableBox tr {
+    height: 80px;
+}
+
+table.tableBox tr.topRow {
+    height: 40px;
+}
+
+table.tableBox tr td {
+    padding: 8px 10px;
+}
+
+tr.topRow td {
+    height: 35px;
+    background-color: var(--rd-nav-dark);/* #579ac5; */
+    border-top: 2px solid black;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+tr td.firstCell {
+    font-size: 1.1rem;
+    border-right: 0px;
+}
+
+tr td.secondCell {
+    border-left: 0px;
+    text-align: right;
+}
+
+td.homeCell1 {
+    border-left: 1px solid gray;
+    /*border-right: 1px solid gray;*/
+    border-bottom: 1px solid gray;
+
+    text-align: center;
+}
+
+td.homeCell2 {
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+td.homeCell3 {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    background-color: rgb(208, 217, 230);
+}
+
+img#logo {
+    padding-bottom: 25px;
+}
+
+/* Login Form*/
+#boxLoginForm {
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+table.loginForm {
+    border: 0px;
+    margin: auto;
+    width: 475px;
+    border-spacing: 5px;
+}
+
+table.loginForm tr {
+    margin: 0px;
+}
+
+table.loginForm tr td input {
+    width: 100%;
+}
+
+.appName {
+    font-size: 2rem;
+}
+
+.tagLine {
+    color: gray;
+}

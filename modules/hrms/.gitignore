@@ -1,0 +1,10 @@
+App/env.php
+erp/aec/paths.php
+erp/aec/public
+erp/.well-known
+*.htaccess
+*error_log
+*.log
+*.ini
+*config.php
+

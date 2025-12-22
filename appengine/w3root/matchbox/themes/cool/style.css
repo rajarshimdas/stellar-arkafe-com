@@ -1,0 +1,593 @@
+/*
++-------------------------------------------------------+
+| Rajarshi Das                                          |
++-------------------------------------------------------+
+| Created: 30-Sep-2011 (3rd day of Durga Puja)          |
+| Updated: 14-May-2014                                  |
++-------------------------------------------------------+
+| CONCERT   http://concert.arkafe.com                   |
+|           rd@rajarshi.me                              |
++-------------------------------------------------------+
+*/
+@import "normalize.css";
+@import "fonts-and-ui.css";
+
+/* CSS */
+body {
+    font-size: 1em;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    font-weight: normal;
+    color: var(--rd-dark-gray);
+}
+
+textarea {
+    font-size: 0.9em;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    font-weight: normal;
+    box-sizing: border-box;
+    color: var(--rd-dark-gray);
+}
+
+input,
+select {
+    box-sizing: border-box;
+    color: var(--rd-dark-gray);
+    padding: 4px;
+    margin: 2px;
+}
+
+select {
+    font-size: 0.9em;
+}
+
+input::placeholder {
+    color: gray;
+    font-size: 0.9em;
+}
+
+table tr td {
+    /* Text color */
+    color: var(--rd-dark-gray);
+}
+
+table thead.stickyTop {
+    top: 0;
+    position: sticky;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rd-color-primary);
+}
+
+.windowBox {
+    width: 1000px;
+    margin: auto;
+    padding: 0px;
+}
+
+.windowBox2 {
+    width: 100%;
+    max-width: var(--rd-max-width);
+    margin: auto;
+    padding: 0px;
+}
+
+.footer {
+    padding: 10px 0 50px 0;
+    text-align: center;
+    color: gray;
+}
+
+td#t2 {
+    background-color: var(--rd-nav-light);
+}
+
+#tabs {
+    /*
+    float: right;
+    width: calc(100% - 15px);
+    line-height: inherit;
+    */
+    font-size: 1.06em;
+    margin: 0;
+    padding: 2px 0px 0px 0px;
+    background-color: var(--rd-nav-light);
+}
+
+#tabs ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#tabs li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+}
+
+#tabs a {
+    font-family: "Roboto Bold";
+    text-align: center;
+    float: left;
+    /* background: rgb(180, 180, 180) no-repeat left top; */
+    background: var(--rd-nav-light) no-repeat left top;
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+    /*---------------------------------------------------------*/
+    /* Change the following width to change the width of tabs  */
+    /*---------------------------------------------------------*/
+    width: 160px;
+    /*---------------------------------------------------------*/
+    /* padding-top: 8px; */
+    line-height: 38px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+#tabs a span {
+    float: left;
+    color: #ffffff
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {
+    float: none
+}
+
+/* End IE5-Mac hack */
+#tabs a:hover {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+#tabs a:hover span {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+#tabs a.activeTab {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+td#t2 a.activeTab span {
+    background: var(--rd-nav-dark);
+    /* RGB(40, 40, 40) */
+}
+
+#nav {
+    font-size: 0.95em;
+    font-weight: normal;
+    height: 35px;
+    /* Sub-Menu Height */
+    background: var(--rd-nav-dark);
+    /* rgb(40, 40, 40); */
+    text-align: center;
+    color: rgb(5, 5, 5);
+}
+
+#nav a {
+    text-align: right;
+    color: white;
+    margin: 0;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: var(--rd-nav-active);
+}
+
+#nav .activeTab {
+    color: var(--rd-nav-active);
+}
+
+.contents-to-be-deleted {
+    height: 420px;
+    width: 900px;
+    vertical-align: top;
+    text-align: center;
+    color: #ffffff;
+    background-color: chartreuse;
+}
+
+/*
++-------------------------------------------------------+
+| Table (13-Feb-2012)					                |
++-------------------------------------------------------+
+*/
+.tabulation {
+    font-size: 0.9em;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.tabulation tr {
+    height: 40px;
+}
+
+.topAndBottomLine {
+    border-top: 1px solid #969696;
+    border-bottom: 1px solid #969696;
+}
+
+.underline {
+    border-bottom: 1px solid #969696;
+}
+
+.headerRow {
+    background: #FFF6F4;
+    font-weight: bold;
+}
+
+.headerRowCell1 {
+    height: 25px;
+    border: 1px solid #969696;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.headerRowCell2 {
+    height: 25px;
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696;
+    border-top: 1px solid #969696;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.headerRowCell3,
+.headerRowCell3a {
+    height: 25px;
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.headerRowCell3a a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: var(--rd-dark-gray);
+}
+
+.headerRowCell3a:hover {
+    background: cyan;
+    cursor: pointer;
+}
+
+.dataRow {
+    height: 25px;
+    border-color: #969696;
+    background: #ffffff;
+}
+
+.dataRowNew {
+    height: 25px;
+    border-color: #969696;
+    background: #ccf255;
+}
+
+.dataRowCell1 {
+    height: 25px;
+    border-bottom: 1px solid #969696;
+    border-left: 1px solid #969696;
+    border-right: 1px solid #969696;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.dataRowCell2,
+.dataRowCell2a {
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.dataRowCell2a a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--rd-dark-gray);
+}
+
+.dataRowCell2a:hover {
+    background: cyan;
+    cursor: pointer;
+}
+
+.summaryRow {
+    font-weight: bold;
+    height: 25px;
+}
+
+.summaryRowCell1 {
+    border: 0px;
+}
+
+.homeRow1Cell1 {
+    height: 70px;
+    text-align: center;
+    border-top: 1px solid #969696;
+    border-bottom: 1px solid #969696;
+    border-left: 1px solid #969696;
+}
+
+.homeRow1Cell2 {
+    border-top: 1px solid #969696;
+    border-bottom: 1px solid #969696;
+}
+
+.homeRow1Cell3 {
+    border-top: 1px solid #969696;
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696;
+}
+
+.homeCell1 {
+    height: 70px;
+    text-align: center;
+    border-bottom: 1px solid #969696;
+    border-left: 1px solid #969696;
+}
+
+.homeCell2 {
+    border-bottom: 1px solid #969696;
+}
+
+.homeCell3 {
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696;
+}
+
+/*
++-------------------------------------------------------+
+| UI Elements                                           |
++-------------------------------------------------------+
+*/
+
+.button {
+    font-size: 0.9em;
+    /* top and bottom | left and right */
+    padding: 4px 12px;
+    margin: 4px 2px;
+    border: 1px solid var(--rd-color-primary);
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: var(--rd-dark-gray);
+    /* from pure-css */
+    display: inline-block;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--rd-color-primary);
+    color: white;
+    cursor: pointer;
+}
+
+.inputReadonly {
+    width: 100%;
+    text-align: left;
+    background: RGB(200, 200, 200);
+}
+
+.inputForm {
+    background: #E8E9FF;
+}
+
+.fa5button {
+    opacity: 0.7;
+    height: 25px;
+}
+
+.fa5button:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.divBanner {
+    background-color: #E8E9FF;
+    line-height: 45px;
+}
+
+/*
++-------------------------------------------------------+
+| Timesheets                                            |
++-------------------------------------------------------+
+*/
+.cellHeaderLeft {
+    border-top: 1px solid RGB(150, 150, 150);
+    border-bottom: 1px solid RGB(150, 150, 150);
+    border-right: 1px solid RGB(150, 150, 150);
+    border-left: 1px solid RGB(150, 150, 150);
+}
+
+.cellHeader {
+    border-top: 1px solid RGB(150, 150, 150);
+    border-bottom: 1px solid RGB(150, 150, 150);
+    border-right: 1px solid RGB(150, 150, 150);
+}
+
+.cellRowLeft {
+    border-bottom: 1px solid RGB(150, 150, 150);
+    border-right: 1px solid RGB(150, 150, 150);
+    border-left: 1px solid RGB(150, 150, 150);
+}
+
+.cellRow {
+    border-bottom: 1px solid RGB(150, 150, 150);
+    border-right: 1px solid RGB(150, 150, 150);
+}
+
+#workgroups {
+    float: right;
+    width: 100%;
+    font-size: 100%;
+    line-height: normal;
+    /*border-bottom:1px solid #000000;*/
+    margin: 0;
+    padding: 0;
+}
+
+#workgroups a {
+    font-weight: normal;
+    text-align: left;
+    float: left;
+    background: white no-repeat left top;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+}
+
+#workgroups a span {
+    float: left;
+    display: block;
+    background: white no-repeat right top;
+    padding: 0;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#workgroups a span {
+    float: none
+}
+
+/* End IE5-Mac hack */
+/* #tabs a:hover {border:1px solid RGB(140,140,140)} */
+#workgroups a:hover span {
+    border: 1px solid RGB(140, 140, 140)
+}
+
+/*
++-------------------------------------------------------+
+| Transmittal List                                      |
++-------------------------------------------------------+
+*/
+.tmTable {
+    font-size: 9pt;
+    font-family: "Segoe UI", "Roboto", "Arial", "Verdana", "Trebuchet MS", "Futura";
+    font-weight: normal;
+    border-collapse: collapse;
+}
+
+.tmHeader {
+    border-top: 1px solid RGB(150, 150, 150);
+    text-align: center;
+}
+
+.tmRowC1 {
+    border-left: 1px solid RGB(150, 150, 150);
+    border-right: 1px solid RGB(150, 150, 150);
+    border-bottom: 1px solid RGB(150, 150, 150);
+    height: 22px;
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tmRowC2 {
+    border-right: 1px solid RGB(150, 150, 150);
+    border-bottom: 1px solid RGB(150, 150, 150);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*
++-------------------------------------------------------+
+| Text Styles                                           |
++-------------------------------------------------------+
+*/
+.notes {
+    color: #1859aa;
+    font-size: 80%;
+}
+
+/*
++-------------------------------------------------------+
+| Sysadmin Module                                       |
++-------------------------------------------------------+
+*/
+.messagebarHidden {
+    display: hidden;
+}
+
+.messagebarSucccess {
+    text-align: center;
+    background-color: rgb(5, 82, 5);
+    color: white;
+    padding: 10px 0 10px 0;
+}
+
+.messagebarError {
+    text-align: center;
+    background-color: rgb(177, 0, 0);
+    color: white;
+    padding: 10px 0 10px 0;
+}
+
+table.formTBL {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+table.formTBL tr:first-child td {
+    background-color: darkslategray;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+
+table.formTBL td {
+    padding: 4px 2px 4px 2px;
+    border: 0px solid gray;
+}
+
+table.formTBL td:first-child {
+    text-align: right;
+}
+
+tr.formNote td {
+    font-size: 85%;
+}
+
+/*
++-------------------------------------------------------+
+| Message                                               |
++-------------------------------------------------------+
+*/
+.work-in-progress {
+    text-align: center;
+    background-color: #ccf255;
+    padding: 5px 0 5px 0;
+}

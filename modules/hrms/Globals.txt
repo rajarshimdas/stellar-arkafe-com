@@ -1,0 +1,4 @@
+activeCalYear
+activeUserId
+
+* Please use the Global.txt in top level folder. This file is for information only.

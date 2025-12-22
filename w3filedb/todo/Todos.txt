@@ -1,0 +1,9 @@
+Points discussed today
+2. Out of office work tab in timesheet. The same data to be captured in leaves MIS
+5. LWP to be computed automatically and reflected in leaves MIS
+
+
+Done
+1. Updating task snapshot and stats as per above
+3. Integration of leave and timesheet modules
+4. Short leave can be applied only once per month regardless of approval status
