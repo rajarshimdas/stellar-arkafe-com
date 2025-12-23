@@ -7,9 +7,9 @@ Updated: 22-Dec-2025
 Install on Digitalocean droplet: firefly
 
 Ubuntu 24.04 LTS 
-Nginx 1.24.13
+Nginx 1.24.0
 php 8.3 (php-mysql extension)
-Mariadb 10.
+Mariadb 10.11.13
 
 
 Configuration Notes:
@@ -17,27 +17,14 @@ Configuration Notes:
 1. Git clone the repo.
 2. Create & Edit appengine/w3root/clientPaths.cgi (w3path)
 3. Create & Edit appengine/w3etc/LocalSettings.php (base_url & database)
-4. Run setup.sh
+4. Create directory w3filedb/session
+5. Run setup.sh
 
 First time on new server:
 
 5. Nginx conf sample at appengine/nginx.conf
 6. Add .cgi to php-fpm security.limit_extensions in pool.d/www.conf
 7. PHP Extensions intl mbstring mysql required
-
-Database setup:
-/*
-create user 'cn1'@'localhost';
-set password for 'cn1'@'localhost' = password('minnie7j');
-
-create user 'cn2'@'localhost';
-set password for 'cn2'@'localhost' = password('m7jack');
-
-grant select,lock tables,show view on s5db.* to 'cn1'@'localhost';
-grant all on a_db.* to 'cn2'@'localhost';
-
-flush privileges;
-*/
 
 VSCode parse *.cgi as php in
 Settings > Files > Associations

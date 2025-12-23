@@ -1,0 +1,42 @@
+/* Create a softlink to this File in w3root
++-------------------------------------------------------+
+| Rajarshi Das						                    |
++-------------------------------------------------------+
+| Created On:   11-May-2024                             |
+| Updated On:                                           |
++-------------------------------------------------------+
+*/
+@import url('normalize.css');
+
+/* Segoi UI */
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('fonts/segoe-ui-semilight.woff2');
+}
+
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light.ttf');
+}
+
+/* Fredoka */
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('fonts/Roboto-Bold.ttf');
+    /* src: url('fonts/segoi-ui-bold.woff2'); */
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Segoe UI", "Roboto", "Arial";
+    font-weight: normal;
+}
+
+dialog {
+    padding: 0px;
+}
+
+dialog#dxMessageBox table tr td {
+    padding: 6px;
+}
