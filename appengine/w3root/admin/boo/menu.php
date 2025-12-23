@@ -22,6 +22,6 @@
     menubar('Timesheet Lock',   $activemenu, 'timesheet-lock');
     menubar('Timesheet Flags',  $activemenu, 'timesheet-flags');
     menubar('Holidays',         $activemenu, 'holidays');
-    menubar('Leave',            $activemenu, 'leave');
+    // menubar('Leave',            $activemenu, 'leave');
     ?>
 </table>

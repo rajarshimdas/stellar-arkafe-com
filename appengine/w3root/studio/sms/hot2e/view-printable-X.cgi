@@ -15,7 +15,8 @@
 
 /* Function to Generate the Table rows */
 
-function xtable($ProjID, $bk, $bn, $dc, $dn, $mode, $fx, $from, $to, $c1, $stage, $gfc, $c2, $c3, $c4, $mysqli) {
+function xtable($ProjID, $bk, $bn, $dc, $dn, $mode, $fx, $from, $to, $c1, $stage, $gfc, $c2, $c3, $c4, $mysqli)
+{
 
     //echo "<br>Project id: $ProjID<br>Project Name: $ProjNM<br>bk: $bk<br>dc:$dc<br>ck1: $c1 <br>ck2: $c2 <br>ck3: $c3<br>Fx: $fx<br>From: $from To: $to<br>Stage: $stage<br>GFC: $gfc<br>From2: $from2 To2: $to2";
     // Check box value parsing
@@ -96,12 +97,12 @@ function xtable($ProjID, $bk, $bn, $dc, $dn, $mode, $fx, $from, $to, $c1, $stage
         }
 
         $result->close();
-    }
-    else
+    } else
         echo "Error: $mysqli->error";
 
     // We got all the DWGid list, use the DWGid() class to get the details..
-    if (count($DWGidX) > 0) {
+    $co = empty($DWGidX) ? 0 : count($DWGidX);
+    if ($co > 0) {
 
         /* Title */
         if ($mode === "block")
@@ -127,5 +128,3 @@ function xtable($ProjID, $bk, $bn, $dc, $dn, $mode, $fx, $from, $to, $c1, $stage
         echo '</table>';
     }
 }
-
-?>
