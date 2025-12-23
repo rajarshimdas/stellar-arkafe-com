@@ -81,7 +81,7 @@ while ($row = $result->fetch_assoc()) {
 <table class="tabulation">
     <tr>
         <td class="cellHeaderLeft" style="width: 120px;">No</td>
-        <td class="cellHeader" style="width:160px;">Status</td>
+        <td class="cellHeader" style="width:300px;">Status</td>
         <td class="cellHeader" style="padding-left: 15px;">Team member</td>
         <td class="cellHeader" style="width: 120px;">New Entries</td>
         <td class="cellHeader" style="width: 120px;">&nbsp;</td>
@@ -123,7 +123,7 @@ while ($row = $result->fetch_assoc()) {
 
         echo '<tr>
                 <td class="cellRowLeft">' . ($i + 1) . '</td>
-                <td class="cellRow"><div>';
+                <td class="cellRow"><div style="text-align:center;background-color:#d7d7d7;">';
 
         tsStatusWidget($thisUId, $lockdt, $dt_today, $d, $m, $Y, $dayname, $dayTotalMin, $holiday, $dt_from, $dt_upto, $ts_lockdt, $mysqli);
 
