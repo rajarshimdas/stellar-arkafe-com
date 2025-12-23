@@ -1,8 +1,6 @@
-<?php 
-/* Pune | 08-Aug-25 */
-
+<?php
 $BD = "/var/www/arkafe/BadDragon";
-$APP = "/var/www/abhikalpan/abhikalpan-pune";
+$APP = "/var/www/beta/stellar-arkafe-com";
 
 
 define("BD", $BD);

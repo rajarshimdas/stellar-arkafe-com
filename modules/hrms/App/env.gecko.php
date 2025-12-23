@@ -3,7 +3,7 @@
 #
 require_once $APP.'/appengine/w3etc/LocalSettings.php';
 
-define("BASE_URL", "https://beta.arkafe.com/");
+define("BASE_URL", "https://st.arkafe.com/");
 define("ENV", "beta");  // ENV: alpha | beta | prod
 define("VERSION", "Ver 1.0s");
 define("sessionSavePath", FILEDB . '/session/');

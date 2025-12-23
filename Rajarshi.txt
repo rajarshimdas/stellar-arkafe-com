@@ -20,6 +20,9 @@ Configuration Notes:
 4. Create directory w3filedb/session
 5. Run setup.sh
 6. Git add - fix permission issues if any
+7. symlink w3root/aec/paths.php
+8. symlink module/hrms/App/env.php
+9. symlink Toolkit/public in w3root/aec/public
 
 First time on new server:
 

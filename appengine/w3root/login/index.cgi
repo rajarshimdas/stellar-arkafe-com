@@ -27,7 +27,7 @@ require_once $w3etc . '/LocalSettings.php';
 <body class="loginPage">
     <div id="boxLoginForm">
 
-        <img id="logo" src="<?= $base_url ?>da/abhikalpan.jpg" alt="logo">
+        <img id="logo" src="<?= $base_url ?>da/stellar.jpeg" style="height:150px;" alt="logo">
         <form action="sign-in.cgi" method="post" accept-charset="utf-8">
             <table class="loginForm">
                 <tr>
