@@ -13,7 +13,7 @@
 $virtualName        = 'appengine';
 
 // UNIX Path
-$w3path             = "/var/www/abhikalpan/abhikalpan-arkafe-com/";
+$w3path             = "/var/www/stellar/stellar-arkafe-com/";
 $virtualFolderPath  = $w3path.$virtualName;
 $new_include_path   = ".:/usr/share/php:/usr/share/pear:$virtualFolderPath/w3etc";
 
