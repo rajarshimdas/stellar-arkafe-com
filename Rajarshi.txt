@@ -19,12 +19,13 @@ Configuration Notes:
 3. Create & Edit appengine/w3etc/LocalSettings.php (base_url & database)
 4. Create directory w3filedb/session
 5. Run setup.sh
+6. Git add - fix permission issues if any
 
 First time on new server:
 
-5. Nginx conf sample at appengine/nginx.conf
-6. Add .cgi to php-fpm security.limit_extensions in pool.d/www.conf
-7. PHP Extensions intl mbstring mysql required
+1. Nginx conf sample at appengine/nginx.conf (symlink it to the nginx/sites-enabled)
+2. Add .cgi to php-fpm security.limit_extensions in pool.d/www.conf
+3. PHP Extensions intl mbstring mysql required
 
 VSCode parse *.cgi as php in
 Settings > Files > Associations

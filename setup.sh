@@ -17,6 +17,3 @@ sudo find appengine/w3root/login/box \( -type d -exec chmod 775 {} \; \) -o \( -
 # Session folder will need to be owned by www-data
 sudo chown -R www-data:www-data w3filedb/session
 sudo chown -R www-data:www-data w3filedb/log
-
-# Delete old sessions
-# sudo rm w3filedb/session/sess_*
