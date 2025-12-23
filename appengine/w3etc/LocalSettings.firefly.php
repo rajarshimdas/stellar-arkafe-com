@@ -8,28 +8,28 @@
 | LocalSettings.php                                     |
 +-------------------------------------------------------+
 */
-$cnfLocalSettings = 'Mumbai';
+$cnfLocalSettings = 'Prod';
 /*
 +-------------------------------------------------------+
 | Base URL                       			            |
 +-------------------------------------------------------+
 */
-$base_url = "https://abhikalpan.arkafe.com/";
-$companyname = "Abhikalpan Architects and Planners";
+$base_url = "https://stellar.arkafe.com/";
+$companyname = "Stellar design studio";
 
 /*
 +-------------------------------------------------------+
 | Database                       			            |
 +-------------------------------------------------------+
 */
-$db_name        = 'adb';
+$db_name        = 's1db';
 $db_host        = 'localhost';
 
-$cn1_uname      = 'turtle1';
-$cn1_passwd     = 'm7jack';
+$cn1_uname      = 'st1';
+$cn1_passwd     = 'dec25';
 
-$cn2_uname      = 'turtle2';
-$cn2_passwd     = 'minnie7j';
+$cn2_uname      = 'st2';
+$cn2_passwd     = 'stDec25';
 
 
 /*
@@ -55,18 +55,19 @@ $pm_roles_id        = 14;
 
 $hostname           = $_SERVER['HTTP_HOST'];
 $cookieName         = 'CONCERT';
-// $cookiePath = $w3path . '/writeable/session/';
+// $cookiePath     = $w3path . '/writeable/session/';
 
 $currency           = 'Rupees';
 
 /*
 +-------------------------------------------------------+
-| Module Access                                         |
+| Module Access                 			            |
 +-------------------------------------------------------+
 */
 $bdModuleAccess = [
     'cost' => [
         'ashok.patel',
+        // 'anand.thakur',
     ],
 ];
 
@@ -74,7 +75,7 @@ $bdModuleAccess = [
 #
 $fastApproveRights = [
     'ashok.patel',
-    'kedar.kulkarni',
+    // 'anand.thakur',
 ];
 
 ## Leave Module
@@ -116,15 +117,13 @@ $tsPortalTabMenu  = [
 
 /*
 +-------------------------------------------------------+
-|// Switch User | 01-May-2025                           |
+| Switch User | 01-May-2025                             |
 +-------------------------------------------------------+
 */
-
 $adminSwitchUser = [
     'abhikalpan',
     'ashok.patel',
 ];
-
 /*
 +-------------------------------------------------------+
 | noTabulationForUsers                                  |
