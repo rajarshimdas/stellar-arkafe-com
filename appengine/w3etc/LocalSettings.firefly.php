@@ -66,7 +66,7 @@ $currency           = 'Rupees';
 */
 $bdModuleAccess = [
     'cost' => [
-        'Ankit.Agrawal',
+        'ankit.agrawal',
         'stellar',
     ],
 ];
@@ -74,14 +74,14 @@ $bdModuleAccess = [
 ## Timesheet Manage
 #
 $fastApproveRights = [
-    'Ankit.Agrawal',
+    'ankit.agrawal',
     'stellar',
 ];
 
 ## Leave Module
 #
 $leaveModuleRole['4'] = [
-    'Ankit.Agrawal',
+    'ankit.agrawal',
     'stellar',
 ];
 
@@ -128,6 +128,6 @@ $adminSwitchUser = [
 +-------------------------------------------------------+
 */
 $noTabulationForUsers = [
-    'Ankit.Agrawal',
+    'ankit.agrawal',
     'stellar',
 ];
