@@ -14,9 +14,9 @@ $scope          = $_POST["scope"] + 0;
 $stage          = $_POST["ps"] + 0;
 $work           = trim($_POST["wk"]);
 // $md          = $_POST["md"] + 0; Mandays
-$hr             = trim($_POST['hr']) + 0;
-$mn             = trim($_POST["mn"]) + 0;
-$tp             = trim($_POST["tp"]) + 0;
+$hr             = (int)trim($_POST['hr']);
+$mn             = (int)trim($_POST["mn"]);
+$tp             = (int)trim($_POST["tp"]);
 
 // Validation flag
 
