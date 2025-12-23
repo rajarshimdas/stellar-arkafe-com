@@ -117,7 +117,7 @@ CREATE TABLE `daemons` (
 
 LOCK TABLES `daemons` WRITE;
 /*!40000 ALTER TABLE `daemons` DISABLE KEYS */;
-INSERT INTO `daemons` VALUES ('stellar',1);
+INSERT INTO `daemons` VALUES ('Ankit.Agrawal',1),('stellar',1);
 /*!40000 ALTER TABLE `daemons` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1088,6 +1088,7 @@ CREATE TABLE `sessi0ns` (
 
 LOCK TABLES `sessi0ns` WRITE;
 /*!40000 ALTER TABLE `sessi0ns` DISABLE KEYS */;
+INSERT INTO `sessi0ns` VALUES ('0qai3cbbm50ilft4vqp92q1v4d','stellar',0,'x','x',100,'2025-12-23 14:47:34','0000-00-00 00:00:00',0),('2qnnc9liduaugb9lcnjpal0g71','stellar',0,'x','x',100,'2025-12-23 14:40:48','0000-00-00 00:00:00',0),('7p81qj1dlc3ivoetupe60o1m3h','ankit.agrawal',0,'x','x',100,'2025-12-23 15:27:35','0000-00-00 00:00:00',1);
 /*!40000 ALTER TABLE `sessi0ns` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1807,7 +1808,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `loginname_UNIQUE` (`loginname`),
   KEY `users_unique_key` (`domain_id`,`loginname`)
-) ENGINE=InnoDB AUTO_INCREMENT=151 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1816,7 +1817,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,0,'Arkbot','e4793$#5','NA','a@b.com',1,'do not delete',0),(150,2,'stellar','office#102','Stellar','a@b.com',1,'bootstrap daemon',1);
+INSERT INTO `users` VALUES (1,0,'Arkbot','e4793$#5','NA','a@b.com',1,'do not delete',0),(150,0,'stellar','office#102','Stellar','a@b.com',1,'bootstrap daemon',0),(151,2,'Ankit.Agrawal','office#102','Ankit Agrawal','user@domain.tld',1,'-',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1874,7 +1875,7 @@ CREATE TABLE `users_a` (
 
 LOCK TABLES `users_a` WRITE;
 /*!40000 ALTER TABLE `users_a` DISABLE KEYS */;
-INSERT INTO `users_a` VALUES (1,'-','full_time','','','-','-','-','1900-01-01','M','Sysadmin',3,1,'-','-','-','-','-','-','-','-','-','-','1900-01-01','1900-01-01','2050-12-31',1,14,12,0,0,0,'-','-','active',0),(150,'-','full_time','-','-','-','-','-','1900-01-01','-','-',3,1,'-','-','-','-','-','-','-','-','-','-','1900-01-01','1900-01-01','2050-12-31',1,17,1,0,0,0,'-','-','active',0);
+INSERT INTO `users_a` VALUES (1,'-','full_time','','','-','-','-','1900-01-01','M','Sysadmin',3,1,'-','-','-','-','-','-','-','-','-','-','1900-01-01','1900-01-01','2050-12-31',1,14,12,0,0,0,'-','-','active',0),(150,'-','full_time','-','-','-','-','-','1900-01-01','-','-',3,1,'-','-','-','-','-','-','-','-','-','-','1900-01-01','1900-01-01','2050-12-31',1,17,1,0,0,0,'-','-','active',0),(151,'-','full_time','-','-','-','-','-','1977-11-23','-','-',3,1,'-','-','-','-','-','-','-','-','-','-','2025-01-01','1900-01-01','2050-12-31',1,17,12,0,0,0,'-','-','active',0);
 /*!40000 ALTER TABLE `users_a` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2506,4 +2507,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-23 14:35:03
+-- Dump completed on 2025-12-23 15:30:59

@@ -8,14 +8,14 @@
 | LocalSettings.php                                     |
 +-------------------------------------------------------+
 */
-$cnfLocalSettings = 'Prod';
+$cnfLocalSettings = 'Beta M';
 /*
 +-------------------------------------------------------+
 | Base URL                       			            |
 +-------------------------------------------------------+
 */
 $base_url = "https://stellar.arkafe.com/";
-$companyname = "Stellar design studio";
+$companyname = "Stellar Studio | dev";
 
 /*
 +-------------------------------------------------------+
@@ -66,24 +66,23 @@ $currency           = 'Rupees';
 */
 $bdModuleAccess = [
     'cost' => [
-        'ashok.patel',
-        // 'anand.thakur',
+        'Ankit.Agrawal',
+        'stellar',
     ],
 ];
 
 ## Timesheet Manage
 #
 $fastApproveRights = [
-    'ashok.patel',
-    // 'anand.thakur',
+    'Ankit.Agrawal',
+    'stellar',
 ];
 
 ## Leave Module
 #
 $leaveModuleRole['4'] = [
-    'ashok.patel',
-    'abhikalpan',
-    'rajeshwari.pillai',
+    'Ankit.Agrawal',
+    'stellar',
 ];
 
 /*
@@ -121,8 +120,7 @@ $tsPortalTabMenu  = [
 +-------------------------------------------------------+
 */
 $adminSwitchUser = [
-    'abhikalpan',
-    'ashok.patel',
+    // 'stellar',
 ];
 /*
 +-------------------------------------------------------+
@@ -130,8 +128,6 @@ $adminSwitchUser = [
 +-------------------------------------------------------+
 */
 $noTabulationForUsers = [
-    'ashok.patel',
-    'kedar.kulkarni',
-    'abhikalpan',
-    'abhikalpan.pune',
+    'Ankit.Agrawal',
+    'stellar',
 ];
