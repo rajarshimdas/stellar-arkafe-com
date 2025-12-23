@@ -8,14 +8,14 @@
 | LocalSettings.php                                     |
 +-------------------------------------------------------+
 */
-$cnfLocalSettings = 'Beta M';
+$cnfLocalSettings = 'Trial';
 /*
 +-------------------------------------------------------+
 | Base URL                       			            |
 +-------------------------------------------------------+
 */
 $base_url = "https://stellar.arkafe.com/";
-$companyname = "Stellar Studio | dev";
+$companyname = "Stellar design studio";
 
 /*
 +-------------------------------------------------------+
