@@ -70,7 +70,7 @@ require_once BD . 'Controller/Cost/Cost.php';
                 <td></td>
                 <td style="width: 140px;"></td>
                 <td style="width:100px;">
-                    <img src="<?= $base_url ?>da/logo-company.jpg" style="height:45px;">
+                    <img src="<?= $base_url ?>da/logo-homepage.jpg" style="height:45px;">
                 </td>
             </tr>
 

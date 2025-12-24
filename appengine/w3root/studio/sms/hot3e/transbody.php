@@ -39,7 +39,7 @@
                     <tr>
                         <td width="15%" align="center" valign="top">
                             <!-- Logo height: 60px -->
-                            <img <?php echo 'src="/da/'.$domainname.'.png"'; ?> alt="Logo">
+                            <img src="/da/logo-transmittal.png" style="height:60px;" alt="Logo">
                         </td>
                         <td width="45%" align="left" valign="top">
 
