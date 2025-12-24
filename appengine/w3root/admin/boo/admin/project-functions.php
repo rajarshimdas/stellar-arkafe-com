@@ -143,6 +143,7 @@ function addNewProject(
         die($mysqli->error);
     }
 
+    /*
     // Create the default Blocks (Added on 19-Mar-2012)
     $query = "insert into blocks
                 (project_id, blockno, blockname, phase, active)
@@ -153,7 +154,7 @@ function addNewProject(
         $error_flag = 1;
         die($mysqli->error);
     }
-
+    */
 
     // Projectscopemap
     $scope = bdProjectScope($mysqli);

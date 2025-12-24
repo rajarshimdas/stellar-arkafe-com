@@ -18,7 +18,7 @@ $branch_id      = $_POST["bid"];
 $domain_id      = 2;
 
 // New
-$contract_dt    = (strlen($_POST['cdt']) > 8)? $_POST['cdt'] : '0000-00-00';
+$contract_dt    = (strlen($_POST['cdt']) > 8) ? $_POST['cdt'] : '0000-00-00';
 
 $contract_period_years      = $_POST['cpy'];
 $contract_period_months     = $_POST['cpm'];
@@ -41,6 +41,7 @@ $enote = isset($_POST['enote']) ? $_POST['enote'] : '-';
 +-------------------------------------------------------+
 */
 $flag = 0;
+$branch_id = 17;    // Mumbai only
 
 // echo "pm_uid: $pm_uid | pc_uid: $pc_uid<br>";
 
@@ -68,6 +69,14 @@ if ($result = $mysqli->query($query)) {
         $flag = 2;
     }
 }
+
+
+// Make sure Project Manager and Project coordinater are not same
+if ($pm_uid == $pc_uid) {
+    $message = "Project Manager and Project coordinater are cannot be the same. Please try again.";
+    $flag = 2;
+}
+
 
 
 // Check jobcode is unique

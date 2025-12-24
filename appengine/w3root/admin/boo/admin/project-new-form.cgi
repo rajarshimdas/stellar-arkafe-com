@@ -19,7 +19,7 @@
     }
 </style>
 <form action="sysadmin.cgi" method="POST">
-    
+
     <input type="hidden" name="a" value="Project New">
     <input type="hidden" name="x" value="project-new">
 
@@ -46,6 +46,21 @@
                 ?>
             </td>
         </tr>
+        <!-- 
+        <tr>
+            <td>Branch</td>
+            <td colspan="3">
+                <?php
+                include('boo/admin/comboBranch.php');
+                comboBranch("-- Select --", 0, $mysqli);
+                ?>
+            </td>
+        </tr> 
+        -->
+        <tr>
+            <td></td>
+            <td colspan="3">Project Attribute (optional):</td>
+        </tr>
         <tr>
             <td>Project Coordinator</td>
             <td colspan="3">
@@ -55,26 +70,13 @@
             </td>
         </tr>
         <tr>
-            <td>Branch</td>
-            <td colspan="3">
-                <?php
-                include('boo/admin/comboBranch.php');
-                comboBranch("-- Select --", 0, $mysqli);
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td colspan="3">Project Attribute (optional):</td>
-        </tr>
-        <tr>
             <td style="width: 30%;">Contract Date & Period</td>
             <td style="width: 30%;">
                 <input type="date" name='cdt'>
             </td>
             <td style="width: 20%;">
                 <select name="cpy" id="cpy">
-                <?php
+                    <?php
                     for ($i = 0; $i < 11; $i++) {
                         echo " <option value=" . $i . ">" . $i . " years</option>";
                     }
