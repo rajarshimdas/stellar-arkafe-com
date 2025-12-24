@@ -46,6 +46,20 @@ $px = getProjectData($projectid, $mysqli);
                 ?>
             </td>
         </tr>
+        
+        <!-- <tr>
+            <td>Branch</td>
+            <td colspan="3">
+                <?php
+                include('boo/admin/comboBranch.php');
+                comboBranch($px["branchname"], $px["branch_id"], $mysqli);
+                ?>
+            </td> -->
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3">Project Attribute (optional):</td>
+        </tr>
         <tr>
             <td>Project Coordinator:</td>
             <td colspan="3">
@@ -53,19 +67,6 @@ $px = getProjectData($projectid, $mysqli);
                 comboUsers($px["pc_name"], $px["pc_uid"], $mysqli, 'pc_uid');
                 ?>
             </td>
-        </tr>
-        <tr>
-            <td>Branch</td>
-            <td colspan="3">
-                <?php
-                include('boo/admin/comboBranch.php');
-                comboBranch($px["branchname"], $px["branch_id"], $mysqli);
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td colspan="3">Project Attribute (optional):</td>
         </tr>
         <tr>
             <td style="width: 30%;">Contract Date & Period</td>
