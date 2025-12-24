@@ -83,7 +83,7 @@ $me = (isset($_GET["me"])) ? $_GET["me"] : null;
                 ?>
             </td>
             <td style="width:200px; text-align: right;" valign="top">
-                <img src="<?= $base_url ?>da/logo-company.jpg" alt="Logo" style="height:45px;">
+                <img src="<?= $base_url ?>da/logo-homepage.jpg" alt="Logo" style="height:45px;">
             </td>
         </tr>
     </tbody>
