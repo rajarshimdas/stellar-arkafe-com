@@ -5,7 +5,7 @@ filename=s1db-${dt}.sql
 BACKUP_DIR="/home/rd/backup/firefly"
 
 # Ensure backup directory exists
-mkdir -p "$BACKUP_DIR"
+/usr/bin/mkdir -p "$BACKUP_DIR"
 
 # Dump database
 /usr/bin/mysqldump \
