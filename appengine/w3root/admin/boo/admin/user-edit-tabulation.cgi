@@ -27,9 +27,9 @@ $usersX = getUsersArray($mysqli);
         <td width="10%">
             <?php
             if ($sysShowDeletedUser > 0) {
-                echo '<a class="button" href="' . BASE_URL . 'admin/sysadmin.cgi?a=User%20Edit&showDel=0">Hide</a>';
+                echo '<a class="button" href="' . BASE_URL . 'admin/sysadmin.cgi?a=User%20Edit&showDel=0" style="width:40px;">Hide</a>';
             }else {
-                echo '<a class="button" href="' . BASE_URL . 'admin/sysadmin.cgi?a=User%20Edit&showDel=1">Show</a>';
+                echo '<a class="button" href="' . BASE_URL . 'admin/sysadmin.cgi?a=User%20Edit&showDel=1" style="width:40px;">Show</a>';
             }
             ?>    
         </td>

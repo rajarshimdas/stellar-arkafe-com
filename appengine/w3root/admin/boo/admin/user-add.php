@@ -23,7 +23,7 @@ $displayname = trim($_POST["dn"]);
 $reports_to_user_id = (int)$_POST["rm_uid"];    // Abhikalpan mod
 $userhrgroup_id = (int)$_POST["hid"];
 $branch_id = (int)$_POST["bid"];
-$doj = (strlen($_POST["doj"]) > 0) ? $_POST["doj"] : '1977-11-23';
+$doj = (strlen($_POST["doj"]) > 0) ? $_POST["doj"] : '1900-01-01';
 
 /* Variables
   echo "thisLoginname: $this_loginname
@@ -131,7 +131,7 @@ if ($flag < 1) {
         $this_user_id = $mysqli->insert_id;
     }
 
-    $DateOfBirth = '1977-11-23';
+    // $DateOfBirth = '1977-11-23';
     $gender = '-';
     $designation = '-';
     $firstname = '-';
@@ -139,9 +139,9 @@ if ($flag < 1) {
     $department_id = 3;
 
     $query = "insert into users_a
-                    (user_id,dob,gender,designation,reports_to_user_id,fname,lname,dt_of_joining,department_id,branch_id,userhrgroup_id)
+                    (user_id,gender,designation,reports_to_user_id,fname,lname,dt_of_joining,department_id,branch_id,userhrgroup_id)
             values
-                    ($this_user_id,'$DateOfBirth','$gender','$designation',$reports_to_user_id,'$firstname','$lastname','$doj',$department_id,$branch_id,$userhrgroup_id)";
+                    ($this_user_id,'$gender','$designation',$reports_to_user_id,'$firstname','$lastname','$doj',$department_id,$branch_id,$userhrgroup_id)";
     //echo "Q3: $query";
 
     if (!$mysqli->query($query)) {

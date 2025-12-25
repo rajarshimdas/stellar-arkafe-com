@@ -15,7 +15,7 @@ $cnfLocalSettings = 'Beta M';
 +-------------------------------------------------------+
 */
 $base_url = "https://st.arkafe.com/";
-$companyname = "Stellar Studio | dev";
+$companyname = "Stellar dev";
 
 /*
 +-------------------------------------------------------+
